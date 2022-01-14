@@ -25,7 +25,7 @@ const SwapRoot = styled("div")({
 });
 
 const SwapBox = styled("div")({
-  background: "#2a2a2a",
+  background: "#000000",
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
@@ -33,14 +33,14 @@ const SwapBox = styled("div")({
   flexWrap: "wrap",
   gridGap: 10,
   padding: 50,
-  border: "2px solid #333333",
+  border: "2px solid #000000",
   boxShadow: "0px 0px 50px rgba(0,0,0,0.5)",
   borderRadius: 10,
   marginTop: 30,
 });
 
 const SwapCard = styled("div")({
-  background: "#2a2a2a",
+  background: "#000000",
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
@@ -61,20 +61,20 @@ const Placeholder = styled("div")({
 });
 
 const Title = styled("h1")({
-  color: "#ff8b0d",
+  color: "#FFE81F",
   fontWeight: "bold",
   fontSize: "3rem",
 });
 
 const Title2 = styled("h1")({
-  color: "#ff8b0d",
+  color: "#FFE81F",
   fontWeight: "bold",
   fontSize: "2rem",
   display: "block",
 });
 
 const About = styled("p")({
-  color: "#aaaaaa",
+  color: "#FFFFFF",
   maxWidth: 530,
   textAlign: "center",
 });
@@ -190,7 +190,7 @@ export function Swap() {
             <NftImage src={imageMap[ape.mint]} alt="ape" />
           ) : (
             <Placeholder />
-          )}
+          )}  
           <Button
             variant="contained"
             onClick={async () => {
@@ -209,10 +209,10 @@ export function Swap() {
 
   return (
     <SwapRoot>
-      <Title>Ape Swap.</Title>
+      <Title>Bounty Hunter Swap</Title>
       {!loading && !!wallet?.connected && (
         <About>
-          Initial swap is 1 SOL all swaps after that will be free. You can swap
+          Initial swap is 0.05 SOL all swaps after that will be free. You can swap
           back and forth as many times as you'd like as long as you own the
           token. There may be two transactions you have to approve.
         </About>
@@ -237,7 +237,7 @@ export function Swap() {
               variant="outlined"
               target="_blank"
               rel="noopener noreferrer"
-              href="https://magiceden.io/marketplace/exiled_degen_ape_academy"
+              href="https://magiceden.io/marketplace/bounty_hunter_space_guild"
             >
               Redeem yourself
             </Button>

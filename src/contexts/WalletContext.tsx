@@ -5,10 +5,13 @@ import {
   WalletProvider as BaseWalletProvider,
 } from "@solana/wallet-adapter-react";
 import {
+  getLedgerWallet,
   getPhantomWallet,
+  getSlopeWallet,
   getSolflareWallet,
+  getSolletExtensionWallet,
   getSolletWallet,
-} from "@solana/wallet-adapter-wallets";
+} from '@solana/wallet-adapter-wallets';
 import { Button } from "antd";
 import React, {
   createContext,
@@ -164,7 +167,7 @@ export const WalletModalProvider: FC<{ children: ReactNode }> = ({
 
 export const WalletProvider: FC<{ children: ReactNode }> = ({ children }) => {
   const wallets = useMemo(
-    () => [getPhantomWallet(), getSolflareWallet(), getSolletWallet()],
+    () => [getPhantomWallet(), getSolflareWallet(), getSolletWallet(), getLedgerWallet(), getSlopeWallet(), getSolletExtensionWallet()],
     []
   );
 

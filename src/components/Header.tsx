@@ -2,11 +2,10 @@ import React from 'react';
 
 import { styled } from '@mui/system';
 import Button from '@mui/material/Button';
-import TwitterIcon from '@mui/icons-material/Twitter';
-import ChatIcon from '@mui/icons-material/Chat';
-
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
+import {faTwitter, faDiscord} from "@fortawesome/free-brands-svg-icons"
 import { Settings } from './Settings';
-import imageLogo from '../images/exiled-logo.png';
+import imageLogo from '../images/logo.svg';
 
 const HeaderRoot = styled('div')({
   padding: 8,
@@ -36,18 +35,18 @@ export default function Header() {
     <HeaderRoot>
       <SocialLinks>
         <Button
-          href="https://discord.gg/exiledapes"
+          href="https://discord.com/invite/mWtejvGMTQ"
           target="_blank"
           rel="noreferrer"
         >
-          <ChatIcon />
+          <FontAwesomeIcon icon={faDiscord} size="2x" />
         </Button>
         <Button
-          href="https://twitter.com/exiledapes"
+          href="https://twitter.com/BountyHunterNFT"
           target="_blank"
           rel="noreferrer"
         >
-          <TwitterIcon />
+          <FontAwesomeIcon icon={faTwitter} size="2x" />
         </Button>
       </SocialLinks>
 

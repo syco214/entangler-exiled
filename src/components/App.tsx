@@ -11,7 +11,6 @@ import "@fontsource/sora";
 
 import { WalletProvider } from "../contexts/WalletContext";
 import { ConnectionProvider } from "../contexts/ConnectionContext";
-import Footer from "./Footer";
 import Header from "./Header";
 import { Swap } from "./Swap";
 
@@ -27,14 +26,14 @@ const theme = createTheme({
   palette: {
     mode: "dark",
     primary: {
-      main: "#ff8b0d",
+      main: "#FFE81F",
     },
   },
   components: {
     MuiCssBaseline: {
       styleOverrides: `
         body {
-          background: linear-gradient(162deg, rgba(51,51,51,1) 19%, rgba(14,14,14,1) 97%);
+          background: "#000000";
         }
       `,
     },
@@ -54,7 +53,6 @@ export default function App() {
                 <Routes>
                   <Route path="/" element={<Swap />} />
                 </Routes>
-                <Footer />
               </BrowserRouter>
             </ThemeProvider>
           </Root>
